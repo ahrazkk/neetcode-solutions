@@ -1,4 +1,5 @@
 class Solution:
+    # I have failed and do not posses knowledgeenough to continue
 
     def encode(self, strs: List[str]) -> str:
         print(strs)
@@ -20,12 +21,16 @@ class Solution:
         rejoin = [s]
         print(rejoin)
         tempword =''
+        checkWord = ''
         res = []
 
         for char in s:
-            if char != "#":
+            checkWord += char
+            print(checkWord)
+            if char != "#" or checkWord == "%##%":
                 tempword += char
                 print(tempword)
+
             else:
                 res.append(tempword)
                 tempword = ''

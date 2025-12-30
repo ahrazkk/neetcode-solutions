@@ -1,38 +1,18 @@
 class Solution:
-
-    def encode(self, strs: List[str]) -> str:
-        print(strs)
-        sentence = []
-        for words in strs:
-            
-            word = words +'#'
-            # print(word)
-            sentence.append(word)
-            # print(sentence)
-
-        final = ''.join(sentence)
-        print(final)
-        return final
-
-    def decode(self, s: str) -> List[str]:
-        print(s)
-
-        rejoin = [s]
-        print(rejoin)
-        tempword =''
-        checkWord = ''
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        print(nums)
         res = []
 
-        for char in s:
-            checkWord += char
-            print(checkWord)
-            if char != "#" or checkWord == "%##%":
-                tempword += char
-                print(tempword)
+        for index,items in enumerate(nums):
+            itemsBefore = nums[:index]
+            itemsAfter = nums[index+1:]
 
-            else:
-                res.append(tempword)
-                tempword = ''
-                print(res)
+            items = itemsBefore + itemsAfter
+
+            print(items)
+            value = math.prod(items)
+            print(value)
+            res.append(value)
+            print(res) 
+
         return res
-

@@ -7,4 +7,4 @@ class Solution:
             goal = target - num
             print(goal)
             if goal in nums:
-                return goal
+                return dict(goal)

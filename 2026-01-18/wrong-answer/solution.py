@@ -1,21 +1,17 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         hashMap = defaultdict(int)
-        tMap = defaultdict(int)
 
-        sSorted = sorted(s)
-
-        for char in sSorted:
+        for char in s:
             hashMap[char] +=1
         print(hashMap)
 
+        wordMap = dict(sorted(hashMap.items()))
+        print(wordMap)
 
-        tSorted = sorted(t)
-        for char in tSorted:
-            tMap[char] += 1 
-            if char not in hashMap or len(s) != len(t):
+
+        for char in t:
+            if char not in wordMap:
+                print(char)
                 return False
-        
-        print(tMap)
-        
         return True

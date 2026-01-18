@@ -6,8 +6,10 @@ class Solution:
         
         for num in nums:
             goal = target - num
-            if goal in prevMap:
-                sumList.append(goal,num)
-                print(sumList)
-                return sumList
+            if goal not in prevMap:
+                prevMap[num] = goal
+                print(prevMap)
+            elif goal in prevMap:
+                print(meow)
+                
                 

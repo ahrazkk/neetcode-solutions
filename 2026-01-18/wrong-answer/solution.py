@@ -1,4 +1,4 @@
-class Solution:
+ss Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         hashMap = defaultdict(int)
 
@@ -11,7 +11,7 @@ class Solution:
 
 
         for char in t:
-            if char not in wordMap:
+            if char not in wordMap or len(s) != len(t):
                 print(char)
                 return False
         return True

@@ -1,6 +1,7 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         hashMap = defaultdict(int)
+        tMap = defaultdict(int)
 
         sSorted = sorted(s)
 
@@ -11,9 +12,10 @@ class Solution:
 
         tSorted = sorted(t)
         for char in tSorted:
+            tMap[char] += 1 
             if char not in hashMap or len(s) != len(t):
                 return False
         
-        print(tSorted)
+        print(tMap)
         
         return True

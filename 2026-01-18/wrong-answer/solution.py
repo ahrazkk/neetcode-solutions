@@ -14,4 +14,6 @@ class Solution:
             if char not in hashMap or len(s) != len(t):
                 return False
         
+        print(tSorted)
+        
         return True
